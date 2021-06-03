@@ -1,0 +1,17 @@
+.idea/
+.vscode/
+
+build/
+node_modules/
+pictures/
+ТЗ/
+psd/
+jpg/
+icon-svg/
+
+*.ai
+*.psd
+*.pdf
+*.log
+
+Thumbs.db
