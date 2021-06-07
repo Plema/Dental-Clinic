@@ -1,0 +1,152 @@
+.doctor-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    height: auto;
+    overflow-y: scroll;
+    padding: 50px 0;
+
+    &::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    &-inner{
+        background: #0D7580;
+
+        padding-bottom: 23px;
+
+        .doctor-popup-info{
+            position: relative;
+            &:after{
+                content: '';
+                display: block;
+                width: 165px;
+                height: 165px;
+
+                background: url('../img/doctor-bg.svg') no-repeat center;
+                background-size: cover;
+
+                position: absolute;
+                top: 0;
+                right: 17px;
+            }
+        }
+
+        .doctor-popup-photo{
+            width: 100%;
+            height: 251px;
+
+            margin-bottom: 17px;
+        }
+        .doctor-popup-name{
+            font-family: 'Mont-SemiBold';
+            font-size: 18px;
+            line-height: 23px;
+            color: #fff;
+
+            margin-bottom: 6px;
+            padding: 0 16px;
+
+            position: relative;
+            z-index: 2;
+        }
+        .doctor-popup-position{
+            font-family: 'Mont-SemiBold';
+            font-size: 16px;
+            line-height: 21px;
+            color: #fff;
+
+            margin-bottom: 15px;
+            padding: 0 16px;
+
+            position: relative;
+            z-index: 2;
+        }
+        .doctor-info-item{
+            font-family: 'Mont-Light';
+            font-size: 16px;
+            line-height: 21px;
+            color: #fff;
+
+            padding: 0 19px 0 36px;
+            margin-bottom: 17px;
+
+            position: relative;
+            z-index: 2;
+
+            &:before{
+                content: '\e801'; 
+                font-family: 'fontello';
+                font-size: 11px;
+
+                position: absolute;
+                top: 0;
+                left: 16px;
+
+            }
+        }
+        .doctor-experience{
+            padding: 0 50px 0 36px;
+            font-family: 'Mont-SemiBold';
+            font-size: 16px;
+            line-height: 21px;
+            color: #fff;
+        }
+        .close-doctor{
+            font-size: 24px;
+            color: #0D7580;
+
+            position: absolute;
+            top: 10px;
+            right: 26px;
+            z-index: 21;
+            cursor: pointer;
+        }
+    }
+    @media(min-width: 768px){
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        padding: 0;
+
+        .container{
+            width: auto;
+        }
+
+        .doctor-popup-inner{
+            display: flex;
+            width: 715px;
+
+            padding-bottom: 0;
+
+            .doctor-popup-photo{
+                width: 280px;
+                height: auto;
+
+                margin-bottom: 0;
+            }
+            .doctor-popup-info{
+                padding: 24px 0 30px;
+
+                &:after{
+                    right: 0;
+                }
+            }
+            .doctor-popup-name{
+                font-size: 20px;
+                line-height: 26px;
+                margin-bottom: 21px;
+            }
+            .doctor-popup-position{
+                margin-bottom: 12px;
+            }
+            .close-doctor{
+                color: #fff;
+                right: 12px;
+            }
+        }
+    }
+}

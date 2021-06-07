@@ -1,0 +1,134 @@
+.decides-popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    height: 100%;
+    overflow-y: scroll;
+    padding: 50px 0;
+
+    &::-webkit-scrollbar {
+        display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    &-inner{
+        background: #fff;
+
+        padding: 40px 18px;
+
+        position: relative;
+
+        .decides-popup-title{
+            font-family: 'Mont-SemiBold';
+            font-size: 18px;
+            line-height: 23px;
+
+            margin-bottom: 20px;
+        }
+        .child{
+            margin-top: 35px;
+        }
+        .decides-popup-item{
+            background: #F2F3F4;
+
+            padding: 16px 18px;
+            margin-bottom: 15px;
+
+            &:last-of-type{
+                margin-bottom: 20px;
+            }
+
+            .decides-popup-text{
+                font-family: 'Mont-Light';
+                font-size: 14px;
+                line-height: 18px;
+                color: #000000;
+
+                margin-bottom: 12px;
+            }
+            .price-green, .price-red{
+                font-family: 'Mont-Heavy';
+                font-size: 18px;
+                line-height: 23px;
+                color: #0D7580;
+            }
+            .price-red{
+                color: #E75E40;
+            }
+        }
+        .sign-up-decides-popup{
+            display: flex;
+            justify-content: center;
+            width: 230px;
+            height: 65px;
+    
+            font-size: 15px;
+            line-height: 19px;
+            color: #0D7580;
+    
+            border: 2px #0D7580 solid;
+    
+            padding: 23px 27px 22px 27px;
+            margin: 0 auto;
+    
+            transition: all 0.3s;
+    
+            &:hover{
+                background: #0D7580;
+    
+                color: #fff;
+            }
+        }
+        .close-decides{
+            font-size: 24px;
+            color: #0D7580;
+
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            z-index: 21;
+            cursor: pointer;
+        }
+    }
+    @media(min-width: 768px){
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    @media(min-width: 1280px){
+        width: 943px;
+        .container{
+            width: auto;
+        }
+        .decides-popup-inner{
+            padding: 41px 55px 41px 73px;
+        }
+        .decides-popup-title{
+            font-size: 20px;
+            line-height: 26px;
+
+            margin-bottom: 35px;
+        }
+        .child{
+            margin: 45px 0 35px;
+        }
+        .decides-popup-item{
+            display: flex;
+            justify-content: space-between;
+
+            .decides-popup-text{
+                width: 81%;
+
+                font-size: 18px;
+                line-height: 23px;
+            }
+            .price-green, .price-red{
+                width: 19%;
+
+                font-size: 20px;
+                line-height: 26px;
+                text-align: right;
+            }
+        }
+    }
+}

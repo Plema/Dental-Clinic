@@ -18,6 +18,59 @@
             }
             nav{
                 display: none;
+
+                width: 227px;
+                height: auto;
+                background: #0C7580;
+                padding: 30px 59px 30px 25px;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                ul{
+                    li{
+                        margin-bottom: 24px;
+                        &:last-child{
+                            margin-bottom: 0;
+                        }
+                        a{
+                            font-family: 'Mont-Regular';
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: #fff;
+                            position: relative;
+                            padding-bottom: 5px;
+
+                            &::after{
+                                content: '';
+                                left: 0;
+                                width: 0;
+                                bottom: 0;
+                                height: 2px;
+                                position: absolute;
+                                background: #fff;
+                                transition: all 0.2s;
+                            }
+                            &:hover{
+                                &:after{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .close-menu{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+                    z-index: 5;
+                    i{
+                        font-size: 25px;
+                        color: #fff;
+                    }
+                }
             }
         }
         .tel-open{
@@ -63,11 +116,19 @@
                 }
                 nav{
                     display: block;
+
+                    position: relative;
+                    background: transparent;
+                    width: auto;
+                    padding: 0;
+
                     ul{
                         display: flex;
                         justify-content: center;
                         li{
                             margin-right: 10px;
+                            margin-bottom: 0;
+
                             &:last-child{
                                 margin-right: 0;
                             }
@@ -92,17 +153,24 @@
                                 }
                                 &:hover{
                                     color: #0D7580;
+
+                                    &:after{
+                                        width: 100%;
+                                    }
                                 }
                             }
                         }
-                        li.active{
-                            a{
-                                color: #0D7580;
-                                &::after{
-                                    width: 100%;
-                                }
-                            }
-                        }
+                        // li.active{
+                        //     a{
+                        //         color: #0D7580;
+                        //         &::after{
+                        //             width: 100%;
+                        //         }
+                        //     }
+                        // }
+                    }
+                    .close-menu{
+                        display: none;
                     }
                 }
             }
@@ -123,7 +191,7 @@
             .logo-nav {
                 .logo {
                     width: 166px;
-                    margin: 0 50px 0 0;
+                    margin: 0 90px 0 0;
                 }
                 nav {
                     ul {
