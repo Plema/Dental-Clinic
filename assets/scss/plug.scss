@@ -1,0 +1,121 @@
+.wrapper{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0D7580;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 0;
+    &:before{
+        z-index: 1;
+        top: 0px;
+        left: 0;
+        width: 600px;
+        background: url(../img/plug-bg-left.svg) no-repeat center;
+        background-size: cover;
+        content: '';
+        position: absolute;
+        display: block;
+        height: 700px;
+    }
+    &:after{
+        right: 0;
+        background: url(../img/plug-bg-right.svg) no-repeat center/cover;
+        z-index: 6;
+        top: 0;
+        width: 600px;
+        content: '';
+        position: absolute;
+        display: block;
+        height: 700px;
+    }
+    @media(max-width:1024px){
+        &:before, &:after{
+            height: 0;
+        }
+    }
+    @media(max-width:1440px){
+        &:before, &:after{
+            height: 300px;
+            width: 300px;
+        } 
+    }
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    h2{
+        margin-top: 24px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 31px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    @media(max-width:540px){
+        padding: 0 15px;
+        img{
+            width: 90vw;
+        }
+        h2{
+            font-size: 20px;
+        }
+    }
+}
+
+.main{
+    p{
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 82px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+    @media(max-width:540px){
+        p{
+            font-size: 40px;
+            padding: 0 15px;
+        }
+    }
+}
+
+.contact{
+    display: flex;
+    justify-content: space-around;
+    p, a{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        text-decoration-line: underline;
+        color: #FFFFFF;
+        margin-bottom: 15px;
+        i{
+            margin-right: 15px;
+        }
+
+    }
+    .column{
+        display: flex;
+        flex-direction: column;
+        margin-right: 97px;
+        &:last-of-type{
+            margin-right: 0;
+        }
+    }
+    @media(max-width: 768px){
+        flex-direction: column;
+        .column{
+            padding: 0 15px;
+            margin-right: 0;
+        }
+        p,a{
+            font-size: 14px;
+        }
+    }
+}
